@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Coffee Shop Website</title>
+        <style>
+            body{
+                background-color: black;
+                color: burlywood;
+            }
+            .nav-menu{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                background-color: #333;
+            }
+            .nav-menu li{
+                margin: 0;
+            }
+            .nav-menu li a{
+                display: block;
+                padding: 14px 20px;
+                color: white;
+                text-decoration: none;
+            }
+            .nav-menu li a:hover{
+                background-color: #575757;
+            }
+            h1{
+                text-align: center;
+                text-decoration: wavy;
+            }
+            section{
+                padding: 40px;
+                display:none;
+            }
+            section.active{
+                display: block;
+            }
+            
+            
+           
+            h2{
+                color: #e32fe3;
+            }
+            #Home{
+                background-color: #f8f1ea;
+                text-align: center;
+            }
+            #About{
+background-color: #eee0d5;
+            }
+            #Contact{
+                background-color: #d8c4b0;
+            }
+            #Order{
+                background-color:#f0e6da ;
+            }
+            #Signin{
+                background-color:#e8d8c3 ;
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            form input,form button{
+            padding: 10px;
+            margin:8px 0 ;
+            width: 100%;
+            max-width:300px ;
+            display: block;
+            }
+            form button{
+                background-color: #3e2f1c;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            form button:hover{
+                background-color: #5c4223;
+            }
+            .social-links{
+                list-style: hover;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                background-color: #886e6e;
+            }
+                
+            
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>Coffee Shop Website</h1>
+       
+                <nav>
+                  <ul class="nav-menu">
+                  <li style="list-style-type: none;"><a onclick="showSection('Home')">Home</a></li>
+                  <li style="list-style-type: none;"><a onclick="showSection('About')">About us</a></li>
+                  <li style="list-style-type: none;"><a onclick="showSection('Contact')">Contact Us</a></li>
+                  <li style="list-style-type: none;"><a onclick="showSection('Order')">Order Now</a></li>
+                  <li style="list-style-type: none;"><a onclick="showSection('Signin')">Sign in</a></li>
+                  </ul>
+                </nav>
+                <section Id="Home"  class="active">
+                    <h2>Welcome to Delight Coffee </h2>
+                    
+                    <p>Your perfect spot for freshly brewed coffee,pastries,and a warm atmosphere.</p>
+                </section>
+                 <section id="About"  >
+                    <h2>About Us</h2>
+                    <p>Delight Coffee is a cosy neighborhood coffee shop offering<br> premium coffee beans,handcrafted drinks,and locally made snacks.We<br>are passionate about quality,sustainability,and creating a space<br>where everyone feels welcome.</p>
+                </section>
+                <section id="Contact">
+                    <h2>Contact Us</h2>
+                    <p>Email:hello@delightcoffee.com<br>phone:+254710224549<br>visit us:Tom Mboya street,Nairobi</p>
+
+                </section>
+                <section id="Order" >
+                    <h2>Order Now</h2>
+                    <p>Select your favorite drink and place an order for pickup or<br>delivery</p>
+                    <form>
+                        <label for="coffee">Choose you coffee:</label>
+                        <input type="text" id="coffee" name="coffee" placeholder="eg cappuccino">
+
+                        <label for="quantity">quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10">
+                        <button onclick="alert('Thank you for your order.Order placed successfully😊!');document.getElementById('suggestion-form').reset();" style="background: #004080;color: white;padding: 10px;border: none;border-radius: 5px;cursor: pointer;">placeholder</button>
+                    </form>
+                </section>
+                <section id="Signin" >
+                    <h2>Sign In</h2>
+                    <p>Sign in to track your orders and get exclusive offers.</p>
+                    <form>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="password" required>
+                                 
+       <button id="submit button" onclick="alert('Thank you for your order.Order placed successfully😊!');document.getElementById('suggestion-form').reset();" style="background: #004080;color: white;padding: 10px;border: none;border-radius: 5px;cursor: pointer;">Sign In</button>
+                    </form>
+                </section>
+                <script>
+                function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+    const selected = document.getElementById(sectionId);
+    if (selected){
+        selected.classList.add('active');
+    }
+}
+                    
+                </script>
+                 <div class="social-links" style="cursor: pointer;">
+    <a href="https://wa.me/254710224549" target="_blank" style="padding: 10px;display: block;">whatsapp</a>
+     <a href="https://facebook.com/gloh glowine" target="_blank"style="padding: 10px;display: block;">facebook</a>
+      <a href="https://Instagram.com/gloh glowine" target="_blank" style="padding: 10px;display: block;">Instagram</a><br><br>
+            <footer>
+            <div class="info">
+                <ul style="list-style-type: none;">
+                <li style="list-style-type: none;">designed by:Apex  Creative Agency</li>
+                <li style="list-style-type: none;">@copywrite2025</li>
+                </ul>
+            </div>
+        </footer><br><br>
+         
+        
+    </body>
+</html>
